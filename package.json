@@ -24,7 +24,7 @@
     },
     "scripts": {
         "dev": "react-scripts start",
-        "build": "npm run format && npm run lint && react-scripts build",
+        "build": "react-scripts build",
         "format": "prettier --write src/**/*.ts{,x}",
         "lint": "eslint src/**/*.ts{,x}"
     },
