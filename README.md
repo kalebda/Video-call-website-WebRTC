@@ -1,41 +1,43 @@
-# Mooz
+# Bit-Meet
 
-WebRTC based video chat app whose name and other stuff is 100% orignal.
-I would write some sexy and sophisticated line, but I have lost it.
+WebRTC based video chat app developed at Bahir Dar Institute of Technology.
+This is the initial version once its updated with more features it will be come
+full featured web app to server at the University.
 
 # [Demo](https://mooz-app.netlify.app/)
 
-TODO A good-looking gif
+Click the demo link to check it out
 
 # Uses
 
-- **`React`** my love.
-- **`Socketio`** for signaling and room management. I don't use `REST` and `Express` at all in this, sue me.
-- **`Fluentui`** for good-looking UI components without writing much CSS and therefore less hairfall.
-- **`Recoil`** for local state management, fuck `Redux`.
+-   **`React`** the best frontend client.
+-   **`Socketio`** for signalling and room management. we don't use `REST` and `Express` at all in this.
+-   **`Fluentui`** for good-looking UI components without writing much CSS.
+-   **`Recoil`** for local state management.
 
-Pretty known thing for peer-to-peer WebRTC connections but I will still state this for commercial purposes: 
-All connection data like video, audio and messages are tranfered peer to peer without going through server.
+All connection data like video, audio and messages are transferred peer to peer without going through server.
 
 # Goal
 
-Open source peer-to-peer video conferencing app core, easily deployable and extendable for custom use cases. So instead of everyone creating those ugly video chat apps, this can be extended for any extra custom features like, file sharing, session recording, options for Media server based solution and/or encryption, etc.
+To build Open source peer-to-peer video conferencing app, easily deployable and extendable for custom use cases. So this can be extended for any extra custom features like, file sharing, session recording, options for Media server based solution and/or encryption, etc.
 
 # Limitations
 
-It scales very well in terms of how many rooms can be on server as it is a peer to peer solution, infact a peer doesn't even need to be connected to server once connection is esablished with other peer. However there is a huge natural limitation on how many participants can be in one single room due to bandwidth and processing requirements. Peer-to-peer playes negative role on that front as every peer is sending and recieving data with every peer in a room. This limitation is little overcomed with adaptive bandwidth usage and other optimizations, but core limitation is by design.
+It scales very well in terms of how many rooms can be on server as it is a peer to peer solution, infact a peer doesn't even need to be connected to server once connection is established with other peer. However there is a huge natural limitation on how many participants can be in one single room due to bandwidth and processing requirements. Peer-to-peer playes negative role on that front as every peer is sending and recieving data with every peer in a room. This limitation is little overcomed with adaptive bandwidth usage and other optimizations, but core limitation is by design.
 
 # Why node-cache instead of database?
 
-Works for now
+Works for now since this is beta version
 
-TODO migrate to redis adapter.
+TODO migrate to mongo db soon.
 
 # Deploying
 
+This app is currently deployed on netlify
+
 ## Prebuilt images with docker-compose
 
-Run the provided `docker-compose` file in *appropriate place*
+Run the provided `docker-compose` file in _appropriate place_
 
 `docker-compose up`
 
@@ -51,7 +53,7 @@ This project is split into two containers, one for react front-end which is buil
 
 Following commands builds these images respectively.
 
-*cd %project-root%*
+_cd %project-root%_
 
 `docker build --build-arg SOCKET_PORT=5000 --tag mooz .`
 
@@ -63,7 +65,7 @@ Following commands builds these images respectively.
 
 `docker run -d --rm -p 5000:5000 -e "PORT=5000" --name server mooz-server`
 
-*If you are gonna have server and client on different domains, pass `ALLOW_ORIGIN` env varibale to server and `REACT_APP_SOCKET_URL` to client.*
+_If you are gonna have server and client on different domains, pass `ALLOW_ORIGIN` env variable to server and `REACT_APP_SOCKET_URL` to client._
 
 ## Manual
 
@@ -71,13 +73,13 @@ If you dont wan't to use docker, these are the npm commands for every step.
 
 [cd <project-root>]
 
-`npm install` to to install react dependencies. 
+`npm install` to to install react dependencies.
 
 `npm run dev` to start development webpack server.
 
 `npm run build` to format, lint and build front-end.
 
-*Then* serve static files accordingly
+_Then_ serve static files accordingly
 
 [cd server]
 
@@ -88,11 +90,3 @@ If you dont wan't to use docker, these are the npm commands for every step.
 `npm run build` transpiles Typescript server file to JavaScript.
 
 `npm run start` starts the Node/Scoket.io server.
-
-# More
-
-Get a life dude!
-
-# More
-
-Still reading? Woowowowoow.
