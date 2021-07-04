@@ -46,7 +46,7 @@ const Eagle: FunctionComponent = () => {
         // }
         const onRoomJoined = (r: Room) => {
             const name = r.name || `by ${r.created_by}` || `with id ${r.id}`
-            window.history.pushState({}, 'Mooz', `/room/${r.id}`)
+            window.history.pushState({}, 'bit-meet', `/room/${r.id}`)
             setRoom(r)
             toast(`Joined room ${name}`)
         }
@@ -54,7 +54,7 @@ const Eagle: FunctionComponent = () => {
             onAbort({ noEmit: true })
         }
         const onDisconnect = () => {
-            connectToast.current = toast('Reconnecting socket, chill!', {
+            connectToast.current = toast('Reconnecting socket, please wait!', {
                 autoClose: Timeout.PERSIST,
             })
         }

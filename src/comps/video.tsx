@@ -105,7 +105,7 @@ const VideoBox: FunctionComponent<VideoBoxProps> = ({
                 // eslint-disable-next-line react/jsx-props-no-spreading
                 {...props}
             >
-                Seriously, How old are you and your browser!
+                Older browser detected! please update your browser and try again
             </video>
             <div className={bottomRow}>
                 {label && (

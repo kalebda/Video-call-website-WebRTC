@@ -20,6 +20,10 @@ export const heading = mergeStyles({
     textAlign: 'center',
     display: 'block',
 })
+export const logo = mergeStyles({
+    display: 'flex',
+    justifyContent: 'center'
+})
 
 export const submit = mergeStyles({
     padding: '1.5em 2em',

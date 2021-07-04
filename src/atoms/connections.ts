@@ -53,7 +53,7 @@ export const addRemoteStreamsSelector = selector<RemoteStream[]>({
     get: ({ get }) => get(remoteStreamsState),
     set: ({ get, set }, newVal) => {
         if (newVal instanceof DefaultValue) {
-            throw Error('What were you thinking dude')
+            throw Error('connection error')
         }
         const [user, display] = newVal as (RemoteStream | undefined)[]
         const remoteStreams = get(remoteStreamsState)
@@ -132,7 +132,7 @@ export const addConnectionsSelector = selector<Connection[]>({
     get: ({ get }) => get(connectionsState), // returns connectionsState as it is
     set: ({ get, set }, newVal) => {
         if (newVal instanceof DefaultValue) {
-            throw Error('What were you thinking dude')
+            throw Error('connection error')
         }
         const connections = get(connectionsState)
         const toAdd: Connection[] = []
@@ -149,7 +149,7 @@ export const removeConnectionsSelector = selector<Connection[]>({
     get: ({ get }) => get(connectionsState), // returns connectionsState as it is
     set: ({ get, set }, newVal) => {
         if (newVal instanceof DefaultValue) {
-            throw Error('What were you thinking dude')
+            throw Error('connection error')
         }
         // remove remote streams with remote ids as that of vals
         const remoteStreams = get(remoteStreamsState)

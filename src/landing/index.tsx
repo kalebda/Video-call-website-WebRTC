@@ -1,10 +1,10 @@
 import { FunctionComponent, useEffect } from 'react'
-import { Stack, Text, Pivot, PivotItem, IPivotStyles } from '@fluentui/react'
+import { Stack, Text, Pivot, PivotItem, IPivotStyles, Image } from '@fluentui/react'
 import fscreen from 'fscreen'
 import VideoPreview from './preview'
 import CreateMeeting from './create'
 import JoinMeeting from './join'
-import { container, containerInner, heading, mr4, options } from './styles'
+import { container, containerInner, heading, mr4, options, logo } from './styles'
 
 const pivotStyles: Partial<IPivotStyles> = {
     root: {
@@ -34,8 +34,9 @@ const Landing: FunctionComponent = () => {
     return (
         <Stack className={container} horizontalAlign="center">
             <Stack.Item className={containerInner}>
+                <Image src="/bdu_logo_tr.png" className={logo} style={{ height: 160 }} />
                 <Text className={heading} variant="superLarge">
-                    Welcome to mooz
+                    Welcome to Bit-Meet
                 </Text>
                 <Stack horizontalAlign="center" horizontal wrap>
                     <Stack.Item className={mr4} grow>

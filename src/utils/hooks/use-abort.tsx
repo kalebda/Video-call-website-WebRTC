@@ -17,7 +17,7 @@ const useAbort = (): ((arg0?: Args) => void) => {
             removeConnections(connections)
             setRoom(null)
             if (!noEmit) socket.emit('leave_room')
-            toast('Room abandoned!, enjoy your lonely life', { type: ToastType.warning })
+            toast('Room abandoned!, meeting ended', { type: ToastType.warning })
         },
         [removeConnections, connections, setRoom, socket],
     )

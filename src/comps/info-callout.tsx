@@ -6,6 +6,7 @@ import {
     FontWeights,
     Link,
     Label,
+    IconButton
 } from '@fluentui/react'
 import type { FunctionComponent } from 'react'
 import { useRecoilValue } from 'recoil'
@@ -33,7 +34,9 @@ const callout = mergeStyleSets({
         marginTop: '2em',
         textAlign: 'center',
         display: 'flex',
-        justifyContent: 'space-between',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 })
 
@@ -61,27 +64,40 @@ const MyCallout: FunctionComponent<ICalloutProps & MyCalloutProps> = ({ showFoot
             </h2>
             <div className={callout.body}>
                 You can invite people directly to this chat by sharing this link{' '}
-                <Label>{link}</Label>
+                <Label>
+                {link}
+                <IconButton
+                        title="Copy"
+                        iconProps={{ iconName: 'Copy' }}
+                        ariaLabel="Copy Invite Link"
+                        onClick={() => navigator.clipboard.writeText(link)}
+                />
+                </Label>
             </div>
             {showFooter && (
                 <div className={callout.footer}>
-                    <span>
-                        Mooz by{' '}
-                        <Link
-                            href="https://github.com/muzam1l"
+                    <span style={{ marginBottom: 10}}>
+                        <strong>Bahir Dar Insititue of Technology Meeting Solution by{' '}</strong>
+                    </span>
+                    <span>Kaleb Damtew</span>
+                    <span>Gedeon Eyasu</span>
+                    <span>Eskinder Abera</span>
+                    <span>Henoke Woldtsenaye</span>
+                    
+                        {/* <Link
+                            href="https://github.com/"
                             target="_blank"
                             rel="nofollow noreferrer noopener"
-                        >
-                            muzam1l
-                        </Link>
-                    </span>
-                    <Link
+                        > */}
+                        {/* </Link> */}
+                   
+                    {/* <Link
                         href="https://github.com/muzam1l/mooz"
                         target="_blank"
                         rel="nofollow noreferrer noopener"
                     >
                         Fork me on GitHub
-                    </Link>
+                    </Link> */}
                 </div>
             )}
         </Callout>

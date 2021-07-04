@@ -18,7 +18,7 @@ const CreateMeeting: FunctionComponent = () => {
     // no need for useCallback as set-state functions dont change
     const onError = () => {
         setDisabled(false)
-        setError('Something went wrong, try again later (ˉ﹃ˉ)')
+        setError('Something went wrong, try again later')
     }
 
     const handleSubmit = useCallback(
