@@ -6,7 +6,7 @@ full featured web app to server at the University.
 
 # [Demo](https://sharp-darwin-f5e646.netlify.app/)
 
-Click the demo link to check it out https://sharp-darwin-f5e646.netlify.app/
+Click the demo link above to check it out
 
 # Uses
 
