@@ -4,9 +4,9 @@ WebRTC based video chat app developed at Bahir Dar Institute of Technology.
 This is the initial version once its updated with more features it will be come
 full featured web app to server at the University.
 
-# [Demo](https://mooz-app.netlify.app/)
+# [Demo](https://sharp-darwin-f5e646.netlify.app/)
 
-Click the demo link to check it out
+Click the demo link to check it out https://sharp-darwin-f5e646.netlify.app/
 
 # Uses
 
