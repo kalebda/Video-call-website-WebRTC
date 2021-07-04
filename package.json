@@ -2,7 +2,7 @@
     "name": "bit-meet",
     "version": "1.0.0",
     "private": true,
-    "proxy": "http://localhost:5000",
+    "proxy": "https://alluring-yellowstone-00918.herokuapp.com/",
     "engines": {
         "node": "14"
     },
