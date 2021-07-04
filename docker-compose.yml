@@ -2,12 +2,12 @@ version: '3'
 
 services:
     client:
-        image: /mooz
+        image: /bit-meet
         ports:
             - 80:80
 
     server:
-        image: muzam1l/mooz-server
+        image: bit-meet/backend-server
         ports:
             - '5000:5000'
         environment:
