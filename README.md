@@ -55,15 +55,15 @@ Following commands builds these images respectively.
 
 _cd %project-root%_
 
-`docker build --build-arg SOCKET_PORT=5000 --tag mooz .`
+`docker build --build-arg SOCKET_PORT=5000 --tag bit-meet .`
 
-`docker build --tag mooz-server ./server`
+`docker build --tag bit-meet-backend ./server`
 
 ### Run containers
 
-`docker run -d --rm -p 80:80 --name client mooz`
+`docker run -d --rm -p 80:80 --name client bit-meet`
 
-`docker run -d --rm -p 5000:5000 -e "PORT=5000" --name server mooz-server`
+`docker run -d --rm -p 5000:5000 -e "PORT=5000" --name server bit-meet-backend`
 
 _If you are gonna have server and client on different domains, pass `ALLOW_ORIGIN` env variable to server and `REACT_APP_SOCKET_URL` to client._
 
