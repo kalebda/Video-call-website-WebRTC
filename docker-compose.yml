@@ -2,12 +2,16 @@ version: '3'
 
 services:
     client:
-        image: /bit-meet
+        build:
+            context: .
+            dockerfile: Dockerfile
         ports:
             - 80:80
 
     server:
-        image: bit-meet/backend-server
+        build:
+            context: ./server
+            dockerfile: ./Dockerfile
         ports:
             - '5000:5000'
         environment:
